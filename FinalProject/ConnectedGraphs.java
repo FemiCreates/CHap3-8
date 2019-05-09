@@ -6,12 +6,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
-//package connectedgraphs;
 
-/**
- *
- * @author bluek
- */
 public class ConnectedGraphs {
 
      private Map<Integer, List<Integer>> adjacencyList;
@@ -115,9 +110,7 @@ public class ConnectedGraphs {
 void BFS(int s)
     {
 
-        // Mark all the vertices as not visited(By default
-
-        // set as false)
+ 
 
         boolean visited[] = new boolean[V];
 
@@ -134,17 +127,12 @@ void BFS(int s)
         while (queue.size() != 0)
         {
 
-            // Dequeue a vertex from queue and print it
 
             s = queue.poll();
 
             System.out.print(s+" ");
 
-            // Get all adjacent vertices of the dequeued vertex s
-
-            // If a adjacent has not been visited, then mark it
-
-            // visited and enqueue it
+         
 
             Iterator<Integer> i = adj[s].listIterator();
 
@@ -174,17 +162,12 @@ void Graph::DFSUtil(int v, bool visited[])
 
 {
 
-    // Mark the current node as visited and
-
-    // print it
 
     visited[v] = true;
 
     cout << v << " ";
 
-    // Recur for all the vertices adjacent
-
-    // to this vertex
+   
 
     list<int>::iterator i;
 
@@ -196,15 +179,13 @@ void Graph::DFSUtil(int v, bool visited[])
 
 }
 
-// DFS traversal of the vertices reachable from v.
 
-// It uses recursive DFSUtil()
 
 void Graph::DFS(int v)
 
 {
 
-    // Mark all the vertices as not visited
+    
 
     bool *visited = new bool[V];
 
@@ -212,9 +193,6 @@ void Graph::DFS(int v)
 
         visited[i] = false;
 
-    // Call the recursive helper function
-
-    // to print DFS traversal
 
     DFSUtil(v, visited);
 
